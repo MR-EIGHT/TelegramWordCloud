@@ -3,19 +3,20 @@
 Simple Word Cloud Generator for Telegram chats.
 
 
+
 # Supported Languages
 - English
 - Farsi
 
 # Usage
-1- Export the Telegram chat you prefer, as a json file.  
-2- Give the WordCloud.py .json file's address.
-
+1- Export any Telegram chat that you prefer as json file.  
+2- Give WordCloud.py the exported chat's address.  
+3- Wait for the WorldCloud to generate the picture.
 # Requirements
 - hazm
 - matplotlib
 - WordCloudFa
-
-
+  
+  
 # Authors
 MR-EIGHT
