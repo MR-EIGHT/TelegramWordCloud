@@ -10,7 +10,6 @@ data = js.load(f)
 f.close()
 
 i = data['messages']
-
 text = ""
 
 for j in range(len(i)):
@@ -18,7 +17,6 @@ for j in range(len(i)):
         for x in range(len(i[j]['text'])):
             if type(i[j]['text'][x]) is str:
                 text += (i[j]['text'][x]).strip() + " "
-
     elif str(i[j]['text']).strip() == "":
         continue
     else:
