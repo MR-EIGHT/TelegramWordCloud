@@ -2,10 +2,10 @@ import json as js
 import string
 
 import matplotlib.pyplot as plt
-from wordcloud_fa import WordCloudFa
 from hazm import *
+from wordcloud_fa import WordCloudFa
 
-f = open('C:\\Users\\MR.EIGHT\\Downloads\\Telegram Desktop\\ChatExport_2021-05-06 (1)\\result.json', encoding="utf8")
+f = open(input("Enter JSON File's address: "), encoding="utf8")
 data = js.load(f)
 f.close()
 
@@ -44,4 +44,4 @@ plt.figure()
 plt.imshow(wordcloud)
 plt.axis('off')
 plt.savefig('saved_figure.png', dpi=400, transparent=True)
-# plt.show()
+plt.show()
