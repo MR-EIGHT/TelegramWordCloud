@@ -1,6 +1,5 @@
-import json as js
 import string
-
+import json as js
 import matplotlib.pyplot as plt
 from hazm import *
 from wordcloud_fa import WordCloudFa
@@ -27,19 +26,17 @@ stop_words = {':', '?', '؟', 'است', 'بود', 'شد', 'گشت', 'گردید'
               ':'}.union(set(stopwords_list()))
 
 text = text.translate(str.maketrans('', '', string.punctuation))
-text = text.lower()
 text = text.translate(str.maketrans('', '', string.digits))
 text = text.translate(str.maketrans('', '', "۰۱۲۳۴۵۶۷۸۹"))
+text = Normalizer().normalize(text).strip().lower()
 text = Stemmer().stem(text)
-text = Normalizer().normalize(text)
 
 wordcloud = WordCloudFa(persian_normalize=True, width=1000, height=1000, margin=20, stopwords=stop_words, repeat=False)
 frequencies = wordcloud.process_text(text)
 wc = wordcloud.generate_from_frequencies(frequencies)
-
 fig = plt.figure(figsize=(10, 10), facecolor=None)
 plt.figure()
 plt.imshow(wordcloud)
 plt.axis('off')
-plt.savefig('saved_figure.png', dpi=400, transparent=True)
+plt.savefig('WordsCloud.png', dpi=400, transparent=True)
 plt.show()
