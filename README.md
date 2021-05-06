@@ -16,6 +16,8 @@ Simple Word Cloud Generator for Telegram chats.
 - hazm
 - matplotlib
 - WordCloudFa
+- numpy
+- nltk
   
   
 # Authors
