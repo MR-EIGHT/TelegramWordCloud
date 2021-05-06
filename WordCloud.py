@@ -1,6 +1,5 @@
 import json as js
 import string
-
 import matplotlib.pyplot as plt
 import numpy as np
 from PIL import Image
